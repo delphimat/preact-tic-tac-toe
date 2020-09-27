@@ -1,0 +1,16 @@
+.X {
+  color: #bb00ff;
+}
+
+.O {
+  color: green;
+}
+
+.squares {
+  background: #8a8064;
+  border: #3d4d9f;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=square.styles.css.map */

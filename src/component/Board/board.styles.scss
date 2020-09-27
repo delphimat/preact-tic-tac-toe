@@ -1,0 +1,12 @@
+// BOARD component CSS
+
+.board {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  border: 0.5rem solid #ffbe38;
+  gap: 0.5rem;
+  background: #ffbe38;
+  border-radius: 20px;
+  width: 500px;
+  height: 500px;
+}

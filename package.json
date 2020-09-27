@@ -1,0 +1,25 @@
+{
+  "name": "fe-hiring-skeleton",
+  "version": "0.0.0",
+  "description": "Mathieu Delphin Frontent Hiring Skeleton",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "karma start"
+  },
+  "author": "Mathieu Delphin",
+  "dependencies": {
+    "@types/mocha": "^5.2.7",
+    "enzyme": "^3.11.0",
+    "karma": "^4.2.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-parcel": "^0.5.2",
+    "mocha": "^6.0.1",
+    "node-forge": "0.7.5",
+    "parcel-bundler": "^1.12.1",
+    "preact": "^8.5.2",
+    "typescript": "^3.5.3"
+  }
+}
