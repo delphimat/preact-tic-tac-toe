@@ -64,7 +64,7 @@ export default class Game extends Component<any, any> {
 
         this.hasWinner = haveAWinner(this.state.historyMoves[this.state.nbrTurn]);
 
-        if (this.state.nbrTurn == 9) {
+        if (this.state.nbrTurn == 9 && !this.hasWinner) {
             messageToDisplay = "Draw";
         }
 
