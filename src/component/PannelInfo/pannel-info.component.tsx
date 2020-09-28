@@ -8,14 +8,14 @@ const PannelInfo = ({ nbrTurn, hasWinner, iconGame }) => {
     let messageToDisplay = '';
 
     if (nbrTurn == 9 && !hasWinner) {
-        messageToDisplay = "___ Draw ___";
+        messageToDisplay = "Draw";
     }
 
     return (<div className="pannel-info">
-        <h1>{hasWinner ? `Winner: ${hasWinner}` : `Next Player: ${iconGame}`}</h1>
-        <p>
+        {!messageToDisplay && (<h1>{hasWinner ? `Winner: ${hasWinner}` : `Next Player: ${iconGame}`}</h1>)}
+        <h1>
             {messageToDisplay}
-        </p>
+        </h1>
     </div>);
 }
 
