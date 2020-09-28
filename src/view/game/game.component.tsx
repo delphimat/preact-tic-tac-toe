@@ -1,6 +1,7 @@
 import {h, Component} from "preact";
 
 import Board from "../../component/Board/board.component";
+import PannelInfo from "../../component/PannelInfo/pannel-info.component";
 import haveAWinner from "./game.utils";
 
 import "./game.styles.css";
@@ -59,27 +60,14 @@ export default class Game extends Component<any, any> {
     }
 
     render() {
-        let displayButtonRestart = false;
-        let messageToDisplay = '';
-
         this.hasWinner = haveAWinner(this.state.historyMoves[this.state.nbrTurn]);
-
-        if (this.state.nbrTurn == 9 && !this.hasWinner) {
-            messageToDisplay = "Draw";
-        }
-
-        // implement restart game
-        if (this.state.nbrTurn == 9 || this.hasWinner) {
-            displayButtonRestart = true;
-        }
 
         return (
             <div>
                 <h1>Tic-tac-toe</h1>
                 <Board onClick={this.handleClick} squares={this.state.historyMoves[this.state.nbrTurn]}/>
-                <h1>{this.hasWinner ? "Winner: " + this.hasWinner : "Next Player: " + this.iconGame}</h1>
-                {messageToDisplay && (<h1>{messageToDisplay}</h1>)}
-                {displayButtonRestart && (
+                <PannelInfo nbrTurn={this.state.nbrTurn} hasWinner={this.hasWinner} iconGame={this.iconGame} />
+                {(this.state.nbrTurn == 9 || this.hasWinner) && (
                     <button onClick={this.handleClickRestart}>Do you want to play one more time ?</button>)}
             </div>
         );
