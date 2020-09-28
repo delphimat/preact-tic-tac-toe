@@ -8,9 +8,13 @@
 
 .squares {
   background: #8a8064;
-  border: #3d4d9f;
+  border: #d47d20;
   font-size: 5rem;
   cursor: pointer;
+}
+
+.squares:hover {
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=square.styles.css.map */
