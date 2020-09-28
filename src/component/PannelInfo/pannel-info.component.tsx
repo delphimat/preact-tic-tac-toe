@@ -1,7 +1,5 @@
 import { h } from "preact";
 
-import Square from "../Square/square.component";
-
 import "./pannel-info.styles.css";
 
 const PannelInfo = ({ nbrTurn, hasWinner, iconGame }) => {
