@@ -19,7 +19,7 @@ export default class Game extends Component<any, any> {
     private iconGame: string;
     public state: IGame;
 
-    private initialState = {
+    private initialState: IGame = {
         nbrTurn: 0,
         xIsPlaying: true,
         historyMoves: [Array(9).fill(null)],
@@ -30,10 +30,8 @@ export default class Game extends Component<any, any> {
         super();
 
         this.state = this.initialState;
-
         this.iconGame = this.state.xIsPlaying ? "X" : "O";
-        this.hasWinner = haveAWinner(this.state.historyMoves[this.state.nbrTurn]);
-
+        this.hasWinner = false;
     }
 
     handleClick = (i) => {
